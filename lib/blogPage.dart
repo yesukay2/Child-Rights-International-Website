@@ -1,4 +1,5 @@
 import 'package:criweb/homePage.dart';
+import 'package:criweb/pdfWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
@@ -218,6 +219,8 @@ class _BlogPageState extends State<BlogPage> {
                     "It is expected to scale up to other needy communities to enhance mobility for school "
                     "going children most especially and the community at large.",
                 date: "12/08/2023",
+                article: "asset/pdf/ALIGNING-ANY-COST-OF-FREE-SHS-WILL-MAKE-IT-A-FAILED-POLICY_CRI.pdf",
+
               ),
               blogWidget(
                 carouselImg1: "asset/tricycle.png",
@@ -259,6 +262,7 @@ class _BlogPageState extends State<BlogPage> {
                     "It is expected to scale up to other needy communities to enhance mobility for school "
                     "going children most especially and the community at large.",
                 date: "13/08/2023",
+                article: "asset/pdf/ALIGNING-ANY-COST-OF-FREE-SHS-WILL-MAKE-IT-A-FAILED-POLICY_CRI.pdf",
               ),
               blogWidget(
                 carouselImg1: "asset/tricycle.png",
@@ -300,6 +304,7 @@ class _BlogPageState extends State<BlogPage> {
                     "It is expected to scale up to other needy communities to enhance mobility for school "
                     "going children most especially and the community at large.",
                 date: "13/08/2023",
+                article: "asset/pdf/ALIGNING-ANY-COST-OF-FREE-SHS-WILL-MAKE-IT-A-FAILED-POLICY_CRI.pdf",
               ),
               BottomAppBar(
                 color: Color(0xFFff9957),

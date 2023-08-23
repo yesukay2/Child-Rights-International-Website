@@ -1,5 +1,6 @@
 import 'package:criweb/aboutPage.dart';
 import 'package:criweb/blogPage.dart';
+import 'package:criweb/pdfWidget.dart';
 import 'package:flutter/material.dart';
 import 'homePage.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const BlogPage(),
       // initialRoute: '/',
       // routes: {
       //   '/': (context) => const HomePage(),

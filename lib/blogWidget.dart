@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:criweb/pdfPage.dart';
+import 'package:criweb/pdfWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -7,7 +7,7 @@ class blogWidget extends StatefulWidget {
   final previewText;
   final fullText;
   final date;
-  // final article;
+  final article;
   final carouselImg1;
   final carouselImg2;
   final carouselImg3;
@@ -19,7 +19,7 @@ class blogWidget extends StatefulWidget {
     required this.previewText,
     required this.fullText,
     required this.date,
-    // required this.article,
+    required this.article,
     required this.carouselImg1,
     required this.carouselImg2,
     required this.carouselImg3,
@@ -117,38 +117,53 @@ class _blogWidgetState extends State<blogWidget> {
                       //preview text
                       child: !_isExpanded
                           ? SizedBox(
-                        height: 340,
-                        //preview article
-                        child: Text(
-                          widget.previewText,
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.amiri(
-                            fontSize: 22,
-                          ),
-                        ),
-                      )
-                          : SizedBox(
-                        height: 340,
-                        child: SingleChildScrollView(
-                          //full article
-                          child: Column(
-                            children: [
-                              Text(
-                                widget.fullText,
+                              height: 340,
+                              //preview article
+                              child: Text(
+                                widget.previewText,
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.amiri(
                                   fontSize: 22,
                                 ),
                               ),
-                              GestureDetector(
-                                child: const Text("Press Release"),
-                                onTap: (){ Navigator.of(context).push(
-                                  MaterialPageRoute(builder: (context) => const PdfPage()),);}
+                            )
+                          : SizedBox(
+                              height: 340,
+                              child: SingleChildScrollView(
+                                //full article
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      widget.fullText,
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.amiri(
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                    GestureDetector(
+                                        child: const Text("Press Release"),
+                                        onTap: () => Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                builder: (context) => pdfWidget(
+                                                    pdfLink: widget.article,
+                                                    context: context),
+                                              ),
+                                            )),
+                                    // GestureDetector(
+                                    //     child: const Text("Click here for Original Press Release"),
+                                    //     onTap: () {
+                                    //       Navigator.of(context).push(
+                                    //         MaterialPageRoute(
+                                    //           builder: (context) =>
+                                    //         ),
+                                    //       );
+                                    //     }),
+
+                                    // const PdfPage(pdfLink: 'asset/pdf/ALIGNING-ANY-COST-OF-FREE-SHS-WILL-MAKE-IT-A-FAILED-POLICY_CRI.pdf',),
+                                  ],
+                                ),
                               ),
-                            ],
-                          ),
-                        ),
-                      ),
+                            ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
