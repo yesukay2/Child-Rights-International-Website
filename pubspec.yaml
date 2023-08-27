@@ -41,6 +41,7 @@ dependencies:
   page_transition: ^2.0.9
   url_launcher: ^6.1.12
   syncfusion_flutter_pdfviewer: ^22.2.8
+  sizer: ^2.0.15
 
 dev_dependencies:
   flutter_test:
